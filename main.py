@@ -17,6 +17,7 @@ def web_search(query: str) -> str:
     Always use this tool for questions about current events, weather, news, or anything requiring up-to-date information.
     Always pass the user's original question as the query argument, without rephrasing or summarizing.
     """
+    print(f"web_search tool called with: {query}")  # For debugging
     try:
         results = []
         with DDGS() as ddgs:
@@ -33,7 +34,7 @@ def web_search(query: str) -> str:
 # Settings
 token = os.getenv('OPENAI_API_KEY')  
 endpoint = 'https://api.openai.com/v1' 
-model = 'gpt-3.5-turbo'
+model = 'gpt-4o'
 
 set_tracing_disabled(True)
 client = AsyncOpenAI(
