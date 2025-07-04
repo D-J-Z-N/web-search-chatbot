@@ -25,6 +25,9 @@ streamlit run main.py
 ## How it works
 - The chatbot uses OpenAI's API for conversation.
 - For real-time or current questions, the agent can use a DuckDuckGo search tool.
+- Streaming of responses
+- Memory up to 10 previous messages
+
 
 ## Notes
 - You need an OpenAI API key with access to the model you specify in `main.py` (e.g., `gpt-4o`).
